@@ -2,6 +2,8 @@
 
 一个基于 Vue 3 的娱乐性人格测试 Web 应用，包含 15 个评估维度、30 道测试题和 26 种人格类型。
 
+**在线体验：** [https://sbti.solaboom.cn/](https://sbti.solaboom.cn/)
+
 ## 技术栈
 
 - **Vue 3** — Composition API + `<script setup>`
