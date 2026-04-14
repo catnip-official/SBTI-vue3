@@ -57,6 +57,15 @@
       </details>
     </div>
 
+    <!-- 小程序引导 -->
+    <div class="weapp-banner">
+      <img src="/sbti.jpg" alt="SBTI 微信小程序" class="weapp-banner-qr" />
+      <div class="weapp-banner-text">
+        <span class="weapp-banner-title">用小程序体验更佳</span>
+        <span class="weapp-banner-desc">微信扫码，随时重测、分享结果给好友</span>
+      </div>
+    </div>
+
     <!-- 操作按钮 -->
     <div class="result-actions">
       <div class="btn-row">
@@ -360,6 +369,46 @@ function goHome() {
   flex-wrap: wrap;
 }
 
+/* 小程序引导 */
+.weapp-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--soft) 0%, #ffffff 100%);
+}
+
+.weapp-banner-qr {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.weapp-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.weapp-banner-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+.weapp-banner-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 @media (max-width: 860px) {
   .result-top {
     grid-template-columns: 1fr;
@@ -369,6 +418,11 @@ function goHome() {
 @media (max-width: 600px) {
   .result-wrap {
     padding: 16px;
+  }
+
+  .weapp-banner-qr {
+    width: 68px;
+    height: 68px;
   }
 }
 </style>

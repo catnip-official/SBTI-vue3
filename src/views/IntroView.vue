@@ -1,11 +1,29 @@
 <template>
   <section class="hero card hero-minimal">
-    <h1>MBTI已经过时，SBTI来了。</h1>
-    <div class="hero-actions hero-actions-single">
-      <button class="btn-primary" @click="handleStart">开始测试</button>
+    <div class="badge">🔥 2026 全网最缺德测试</div>
+
+    <div class="hero-title-group">
+      <p class="hero-old"><s>MBTI</s>已经过时了</p>
+      <p class="hero-welcome">欢迎来到</p>
+      <h1 class="hero-brand">SBTI</h1>
     </div>
+
+    <p class="hero-desc">拒绝刻板标签，直击灵魂深处的阴暗面。<br/>你敢面对真实的自己吗？</p>
+
+    <button class="btn-start" @click="handleStart">接受灵魂拷问</button>
+
     <div class="intro-footer">
-      <span>仅供娱乐，请勿当真</span>
+      <span class="footer-warn">⚠️ 本测试极具攻击性，玻璃心请火速撤离</span>
+      <span class="footer-note">（仅供娱乐，切勿当真）</span>
+    </div>
+
+    <div class="weapp-promo">
+      <div class="weapp-divider"><span>推荐使用小程序</span></div>
+      <img src="/sbti.jpg" alt="SBTI 微信小程序" class="weapp-qr" />
+      <div class="weapp-text">
+        <span class="weapp-line">微信扫码 · 解锁专属隐藏人格</span>
+        <span class="weapp-line">一键分享 · 和好友对比结果</span>
+      </div>
     </div>
   </section>
 </template>
@@ -25,54 +43,200 @@ function handleStart() {
 
 <style scoped>
 .hero-minimal {
-  min-height: 48vh;
+  min-height: calc(100dvh - 48px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  padding: 42px 20px;
+  padding: 20px 20px 24px;
 }
 
 .hero-minimal::after {
   display: none;
 }
 
-.hero-minimal h1 {
-  max-width: none;
-  margin: 0;
-  font-size: clamp(28px, 5vw, 52px);
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+/* 徽章 */
+.badge {
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-strong);
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 22px;
-}
-
-.hero-actions-single {
-  justify-content: center;
-  margin-top: 28px;
-}
-
-.intro-footer {
-  padding-top: 2rem;
+/* 标题组 */
+.hero-title-group {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  align-items: center;
+}
+
+.hero-old {
+  font-size: clamp(14px, 2.5vw, 18px);
   color: var(--muted);
-  font-size: 14px;
+  letter-spacing: 0.04em;
 }
 
-.intro-footer a {
+.hero-old s {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent);
+}
+
+.hero-welcome {
+  font-size: clamp(16px, 3vw, 20px);
+  color: var(--text);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.hero-brand {
+  margin-top: 2px;
+  font-size: clamp(52px, 11vw, 82px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
   color: var(--accent-strong);
-  text-decoration: none;
+  text-shadow: 0 4px 24px rgba(77, 106, 83, 0.12);
 }
 
-.intro-footer a:hover {
-  text-decoration: underline;
+/* 描述 */
+.hero-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* 按钮 */
+.btn-start {
+  padding: 13px 34px;
+  border-radius: 999px;
+  background: var(--accent-strong);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 0 8px 28px rgba(77, 106, 83, 0.22);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.btn-start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(77, 106, 83, 0.3);
+}
+
+/* 警告 */
+.intro-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.footer-warn {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.footer-note {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* 小程序引流 */
+.weapp-promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.weapp-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.weapp-divider::before,
+.weapp-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.weapp-divider span {
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.weapp-qr {
+  width: 152px;
+  height: 152px;
+  border-radius: 16px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  object-fit: contain;
+}
+
+.weapp-text {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.weapp-line {
+  font-size: 13px;
+  color: var(--accent-strong);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.weapp-line:last-child {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .hero-minimal {
+    min-height: calc(100dvh - 28px);
+    padding: 14px 16px 18px;
+  }
+
+  .hero-brand {
+    font-size: clamp(44px, 13vw, 66px);
+  }
+
+  .hero-desc {
+    font-size: 13px;
+  }
+
+  .btn-start {
+    padding: 12px 30px;
+    font-size: 15px;
+  }
+
+  .footer-warn {
+    font-size: 12px;
+  }
+
+  .weapp-qr {
+    width: 136px;
+    height: 136px;
+  }
 }
 </style>

@@ -4,6 +4,10 @@
 
 **在线体验：** [https://sbti.solaboom.cn/](https://sbti.solaboom.cn/)
 
+**微信小程序：**
+
+<img src="public/sbti.jpg" width="200" alt="SBTI 微信小程序码" />
+
 ## 技术栈
 
 - **Vue 3** — Composition API + `<script setup>`
