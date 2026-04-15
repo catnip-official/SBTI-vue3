@@ -19,7 +19,7 @@
 
     <div class="weapp-promo">
       <div class="weapp-divider"><span>推荐使用小程序</span></div>
-      <img src="/sbti.jpg" alt="SBTI 微信小程序" class="weapp-qr" />
+      <img src="/funny.jpg" alt="SBTI 微信小程序" class="weapp-qr" />
       <div class="weapp-text">
         <span class="weapp-line">微信扫码 · 解锁专属隐藏人格</span>
         <span class="weapp-line">一键分享 · 和好友对比结果</span>
