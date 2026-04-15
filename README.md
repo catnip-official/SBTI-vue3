@@ -6,7 +6,7 @@
 
 **微信小程序：**
 
-<img src="public/sbti.jpg" width="200" alt="SBTI 微信小程序码" />
+<img src="public/funny.jpg" width="200" alt="SBTI 微信小程序码" />
 
 ## 技术栈
 
